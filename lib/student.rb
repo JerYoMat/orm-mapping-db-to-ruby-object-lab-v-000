@@ -60,7 +60,7 @@ class Student
     SQL
     data = DB[:conn].execute(sql)
       Student.new_from_db(data)
-    end
+
  
   end 
 

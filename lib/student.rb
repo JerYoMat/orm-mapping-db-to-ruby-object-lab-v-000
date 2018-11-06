@@ -6,7 +6,8 @@ class Student
     sql = <<-SQL
       SELECT name FROM students where id=?
     SQL
-    DB[:conn].execute(sql)
+    array = DB[:conn].execute(sql)
+    binding.pry 
   end
 
   def self.all
@@ -37,7 +38,6 @@ class Student
     )
     SQL
     array = DB[:conn].execute(sql)
-    binding.pry 
   end
 
   def self.drop_table

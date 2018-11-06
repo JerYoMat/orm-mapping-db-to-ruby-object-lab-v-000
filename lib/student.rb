@@ -58,8 +58,8 @@ class Student
       FROM students WHERE grade = 10 
       Limit 1
     SQL
-    data = DB[:conn].execute(sql)
-      binding.pry 
+    data = DB[:conn].execute(sql).first 
+    self.new_from_db(data)
 
  
   end 

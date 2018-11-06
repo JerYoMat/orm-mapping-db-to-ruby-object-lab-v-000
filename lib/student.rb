@@ -59,7 +59,7 @@ class Student
       Limit 1
     SQL
     data = DB[:conn].execute(sql)
-      Student.new_from_db(data)
+      binding.pry 
 
  
   end 

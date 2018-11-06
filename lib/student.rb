@@ -58,8 +58,8 @@ class Student
       FROM students WHERE grade = 10 
       Limit 1
     SQL
-    DB[:conn].execute(sql).map do |row|
-      self.new_from_db(row)
+    data = DB[:conn].execute(sql)
+      Student.new_from_db(data)
     end
  
   end 

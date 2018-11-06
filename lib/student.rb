@@ -36,8 +36,8 @@ class Student
       grade TEXT
     )
     SQL
-
-    DB[:conn].execute(sql)
+    array = DB[:conn].execute(sql)
+    binding.pry 
   end
 
   def self.drop_table

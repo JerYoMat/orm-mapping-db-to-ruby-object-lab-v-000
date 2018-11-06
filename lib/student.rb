@@ -6,6 +6,7 @@ class Student
     sql = <<-SQL
       SELECT name FROM students where id=?
     SQL
+    DB[:conn].execute(sql)
   end
 
   def self.all
